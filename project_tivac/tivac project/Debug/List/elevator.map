@@ -1,0 +1,230 @@
+###############################################################################
+#
+# IAR ELF Linker V8.32.1.169/W32 for ARM                  30/May/2020  00:23:43
+# Copyright 2007-2018 IAR Systems AB.
+#
+#    Output file  =  
+#        C:\Users\M\OneDrive\Desktop\project_tivac\tivac
+#        project\Debug\Exe\elevator.out
+#    Map file     =  
+#        C:\Users\M\OneDrive\Desktop\project_tivac\tivac
+#        project\Debug\List\elevator.map
+#    Command line =  
+#        -f C:\Users\M\AppData\Local\Temp\EW1560.tmp
+#        ("C:\Users\M\OneDrive\Desktop\project_tivac\tivac
+#        project\Debug\Obj\main.o"
+#        "C:\Users\M\OneDrive\Desktop\project_tivac\tivac
+#        project\Debug\Obj\tm4c123gh6pm_startup_ccs.o" --no_out_extension -o
+#        "C:\Users\M\OneDrive\Desktop\project_tivac\tivac
+#        project\Debug\Exe\elevator.out" --redirect _Printf=_PrintfFullNoMb
+#        --redirect _Scanf=_ScanfFullNoMb --map
+#        "C:\Users\M\OneDrive\Desktop\project_tivac\tivac
+#        project\Debug\List\elevator.map" --config "C:\Program Files (x86)\IAR
+#        Systems\Embedded Workbench 8.2\arm\CONFIG\generic_cortex.icf"
+#        --semihosting --entry __iar_program_start --vfe --text_out locale)
+#
+###############################################################################
+
+*******************************************************************************
+*** RUNTIME MODEL ATTRIBUTES
+***
+
+CppFlavor        = *
+__CPP_Exceptions = Disabled
+__CPP_Language   = C++14
+__SystemLibrary  = DLib
+__dlib_version   = 6
+
+
+*******************************************************************************
+*** HEAP SELECTION
+***
+
+The basic heap was selected because no calls to memory allocation
+functions were found in the application outside of system library
+functions, and there are calls to deallocation functions in the
+application.
+
+
+*******************************************************************************
+*** PLACEMENT SUMMARY
+***
+
+"A0":  place at 0x0 { ro section .intvec };
+"P1":  place in [from 0x0 to 0x7'ffff] { ro };
+define block CSTACK with size = 1K, alignment = 8 { };
+define block PROC_STACK with size = 0M, alignment = 8 { };
+define block HEAP with size = 2K, alignment = 8 { };
+"P2":  place in [from 0x2000'0000 to 0x2000'ffff] {
+          rw, block CSTACK, block PROC_STACK, block HEAP };
+initialize by copy { rw };
+
+  Section            Kind         Address   Size  Object
+  -------            ----         -------   ----  ------
+"A0":                                       0x40
+  .intvec            ro code          0x0   0x40  vector_table_M.o [3]
+                                   - 0x40   0x40
+
+"P1":                                      0x6c8
+  .text              ro code         0x40  0x4fe  main.o [1]
+  .text              ro code        0x53e    0x2  vector_table_M.o [3]
+  .text              ro code        0x540   0x56  ABImemcpy_unaligned.o [3]
+  .text              ro code        0x596   0x2c  copy_init3.o [3]
+  .rodata            const          0x5c2    0x1  unwind_debug.o [4]
+  .text              ro code        0x5c4   0x28  data_init.o [3]
+  .rodata            const          0x5ec   0x24  main.o [1]
+  .iar.init_table    const          0x610   0x14  - Linker created -
+  .rodata            const          0x624   0x20  main.o [1]
+  .text              ro code        0x644   0x1e  cmain.o [3]
+  .text              ro code        0x662    0x4  low_level_init.o [2]
+  .text              ro code        0x666    0x4  exit.o [2]
+  .text              ro code        0x66c    0xa  cexit.o [3]
+  .text              ro code        0x678   0x14  exit.o [4]
+  .rodata            const          0x68c   0x18  main.o [1]
+  .rodata            const          0x6a4   0x14  main.o [1]
+  .rodata            const          0x6b8   0x14  main.o [1]
+  .rodata            const          0x6cc   0x10  main.o [1]
+  .rodata            const          0x6dc   0x10  main.o [1]
+  .rodata            const          0x6ec    0xc  main.o [1]
+  .text              ro code        0x6f8    0xc  cstartup_M.o [3]
+  Initializer bytes  const          0x704    0x4  <for P2-1>
+  .rodata            const          0x708    0x0  copy_init3.o [3]
+                                  - 0x708  0x6c8
+
+"P2", part 1 of 2:                           0x4
+  P2-1                        0x2000'0000    0x4  <Init block>
+    .data            inited   0x2000'0000    0x4  main.o [1]
+                            - 0x2000'0004    0x4
+
+"P2", part 2 of 2:                         0x400
+  CSTACK                      0x2000'0008  0x400  <Block>
+    CSTACK           uninit   0x2000'0008  0x400  <Block tail>
+                            - 0x2000'0408  0x400
+
+Unused ranges:
+
+         From           To      Size
+         ----           --      ----
+        0x708     0x7'ffff  0x7'f8f8
+  0x2000'0004  0x2000'0007       0x4
+  0x2000'0408  0x2000'ffff    0xfbf8
+
+
+*******************************************************************************
+*** INIT TABLE
+***
+
+          Address      Size
+          -------      ----
+Copy (__iar_copy_init3)
+    1 source range, total size 0x4:
+                0x704   0x4
+    1 destination range, total size 0x4:
+          0x2000'0000   0x4
+
+
+
+*******************************************************************************
+*** MODULE SUMMARY
+***
+
+    Module                 ro code  ro data  rw data
+    ------                 -------  -------  -------
+command line/config:
+    ------------------------------------------------
+    Total:
+
+C:\Users\M\OneDrive\Desktop\project_tivac\tivac project\Debug\Obj: [1]
+    main.o                   1 278      180        4
+    ------------------------------------------------
+    Total:                   1 278      180        4
+
+dl7M_tln.a: [2]
+    exit.o                       4
+    low_level_init.o             4
+    ------------------------------------------------
+    Total:                       8
+
+rt7M_tl.a: [3]
+    ABImemcpy_unaligned.o       86
+    cexit.o                     10
+    cmain.o                     30
+    copy_init3.o                44
+    cstartup_M.o                12
+    data_init.o                 40
+    vector_table_M.o            66
+    ------------------------------------------------
+    Total:                     288
+
+shb_l.a: [4]
+    exit.o                      20
+    unwind_debug.o                        1
+    ------------------------------------------------
+    Total:                      20        1
+
+    Gaps                         5
+    Linker created                       20    1 024
+----------------------------------------------------
+    Grand Total:             1 599      201    1 028
+
+
+*******************************************************************************
+*** ENTRY LIST
+***
+
+Entry                       Address   Size  Type      Object
+-----                       -------   ----  ----      ------
+.iar.init_table$$Base         0x610          --   Gb  - Linker created -
+.iar.init_table$$Limit        0x624          --   Gb  - Linker created -
+?main                         0x645         Code  Gb  cmain.o [3]
+CSTACK$$Base            0x2000'0008          --   Gb  - Linker created -
+CSTACK$$Limit           0x2000'0408          --   Gb  - Linker created -
+LCD_command(unsigned char)
+                              0x333   0x36  Code  Gb  main.o [1]
+LCD_data(unsigned char)
+                              0x369   0x24  Code  Gb  main.o [1]
+LCD_init()                    0x2c3   0x70  Code  Gb  main.o [1]
+Region$$Table$$Base           0x610          --   Gb  - Linker created -
+Region$$Table$$Limit          0x624          --   Gb  - Linker created -
+UART_InChar()                 0x453   0x10  Code  Gb  main.o [1]
+UART_InUDec()                 0x50d   0x32  Code  Gb  main.o [1]
+UART_Init()                   0x3e7   0x6c  Code  Gb  main.o [1]
+__cmain                       0x645         Code  Gb  cmain.o [3]
+__exit                        0x679   0x14  Code  Gb  exit.o [4]
+__iar_copy_init3              0x597   0x2c  Code  Gb  copy_init3.o [3]
+__iar_data_init3              0x5c5   0x28  Code  Gb  data_init.o [3]
+__iar_debug_exceptions        0x5c2    0x1  Data  Gb  unwind_debug.o [4]
+__iar_program_start           0x6f9         Code  Gb  cstartup_M.o [3]
+__iar_unaligned_memcpy4
+                              0x541         Code  Gb  ABImemcpy_unaligned.o [3]
+__iar_unaligned_memcpy8
+                              0x541         Code  Gb  ABImemcpy_unaligned.o [3]
+__low_level_init              0x663    0x4  Code  Gb  low_level_init.o [2]
+__vector_table                  0x0         Data  Gb  vector_table_M.o [3]
+_call_main                    0x651         Code  Gb  cmain.o [3]
+_exit                         0x66d         Code  Gb  cexit.o [3]
+_main                         0x65f         Code  Gb  cmain.o [3]
+delayMs(int)                  0x3b7   0x1a  Code  Gb  main.o [1]
+delayUs(int)                  0x3d1   0x16  Code  Gb  main.o [1]
+exit                          0x667    0x4  Code  Gb  exit.o [2]
+id_client               0x2000'0000    0x4  Data  Gb  main.o [1]
+keypad_getkey()               0x205   0xbe  Code  Gb  main.o [1]
+keypad_init()                 0x1b5   0x50  Code  Gb  main.o [1]
+lcd_clear()                   0x3ad    0xa  Code  Gb  main.o [1]
+lcd_string(unsigned char const *)
+                              0x38d   0x20  Code  Gb  main.o [1]
+main                           0x41  0x140  Code  Gb  main.o [1]
+portf_init()                  0x181   0x34  Code  Gb  main.o [1]
+
+
+[1] = C:\Users\M\OneDrive\Desktop\project_tivac\tivac project\Debug\Obj
+[2] = dl7M_tln.a
+[3] = rt7M_tl.a
+[4] = shb_l.a
+
+  1 599 bytes of readonly  code memory
+    201 bytes of readonly  data memory
+  1 028 bytes of readwrite data memory
+
+Errors: none
+Warnings: none
