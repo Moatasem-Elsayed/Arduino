@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1590804608 source:c:\users\m\onedrive\desktop\arm7\main.c
+	<stdio.h>
+	<stdlib.h>
+

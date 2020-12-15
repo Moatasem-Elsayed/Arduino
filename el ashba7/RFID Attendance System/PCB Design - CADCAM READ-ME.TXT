@@ -1,0 +1,43 @@
+LABCENTER PROTEUS TOOL INFORMATION FILE
+=======================================
+
+In case of difficulty, please e-mail support@labcenter.co.uk
+
+Tool set up for Proteus layout 'PCB Design.LYT'.
+CADCAM generated at 11:32:16 PM on Tuesday, March 20, 2018.
+
+File List
+---------
+Top Copper              : PCB Design - CADCAM Top Copper.TXT
+Bottom Copper           : PCB Design - CADCAM Bottom Copper.TXT
+Top Silk Screen         : PCB Design - CADCAM Top Silk Screen.TXT
+Top Solder Resist       : PCB Design - CADCAM Top Solder Resist.TXT
+Bottom Solder Resist    : PCB Design - CADCAM Bottom Solder Resist.TXT
+Drill                   : PCB Design - CADCAM Drill.TXT
+
+Photoplotter Setup
+------------------
+Format: RS274X, ASCII, 2.4, imperial, absolute, eob=*, LZO
+Notes:  D=Diameter, S=Side, W=Width, H=Height
+
+D10	CIRCLE	D=12th                                      DRAW
+D11	CIRCLE	D=50th                                      FLASH
+D12	SQUARE	S=50th                                      FLASH
+D13	SQUARE	S=80th                                      FLASH
+D14	CIRCLE	D=70th                                      FLASH
+D15	CIRCLE	D=8th                                       DRAW
+D16	SMT	W=70th                H=70th                FLASH
+D17	SMT	W=100th               H=100th               FLASH
+D18	CIRCLE	D=90th                                      FLASH
+
+NC Drill Setup
+--------------
+Format: ASCII, 2.4, imperial, absolute, eob=<CR><LF>, no zero suppression.
+Notes:  Tool sizes are diameters. Layer sets are in brackets - 0=TOP, 15=BOTTOM, 1-14=INNER.
+
+T01	20th (0-15)
+T02	30th (0-15)
+T03	40th (0-15)
+
+
+[END OF FILE]
